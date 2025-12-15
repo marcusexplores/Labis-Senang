@@ -40,15 +40,15 @@ import JejakWarisanPhoto from "@/assets/photos/Day2_JejakWarisan.jpg";
 import TrainBuildingPhoto from "@/assets/photos/Day2_TrainBuilding.jpg";
 import TrainBuildingSidePhoto from "@/assets/photos/Day2_TrainBuilding_Side.jpg";
 import FuMeiPhoto from "@/assets/photos/Day2_FuMei.jpg";
-import SunsetAiChoo from "@/assets/photos/Day2_Sunset_AiChoo.jpg";
-import SunsetKokSeng from "@/assets/photos/Day2_Sunset_KokSeng.jpg";
-import SunsetAunt from "@/assets/photos/Day2_Sunset_Aunt.jpg";
-import SunsetAiKee from "@/assets/photos/Day2_Sunset_AiKee.jpg";
-import SunsetFiona from "@/assets/photos/Day2_Sunset_Fiona.jpg";
-import SunsetMindy from "@/assets/photos/Day2_Sunset_Mindy.jpg";
-import SunsetMarcus from "@/assets/photos/Day2_Sunset_Marcus.jpg";
-import DinnerHotpot from "@/assets/photos/Day2_Dinner_Hotpot.jpg";
-import DinnerFriedFood from "@/assets/photos/Day2_Dinner_FriedFood.jpg";
+import SunsetAiChooPhoto from "@/assets/photos/Day2_Sunset_AiChoo.jpg";
+import SunsetKokSengPhoto from "@/assets/photos/Day2_Sunset_KokSeng.jpg";
+import SunsetAuntPhoto from "@/assets/photos/Day2_Sunset_Aunt.jpg";
+import SunsetAiKeePhoto from "@/assets/photos/Day2_Sunset_AiKee.jpg";
+import SunsetFionaPhoto from "@/assets/photos/Day2_Sunset_Fiona.jpg";
+import SunsetMindyPhoto from "@/assets/photos/Day2_Sunset_Mindy.jpg";
+import SunsetMarcusPhoto from "@/assets/photos/Day2_Sunset_Marcus.jpg";
+import DinnerHotpotPhoto from "@/assets/photos/Day2_Dinner_Hotpot.jpg";
+import DinnerFriedFoodPhoto from "@/assets/photos/Day2_Dinner_FriedFood.jpg";
 
 export const Day2Page = () => {
   return (
@@ -400,31 +400,31 @@ export const Day2Page = () => {
           variant={mediaContainerVariant.Quilt}
           data={[
             {
-              data: { src: SunsetAiChoo, alt: "Ai Choo and Sunset" },
+              data: { src: SunsetAiChooPhoto, alt: "Ai Choo and Sunset" },
               className: "col-span-6 row-span-1",
             },
             {
-              data: { src: SunsetKokSeng, alt: "Kok Seng and Sunset" },
+              data: { src: SunsetKokSengPhoto, alt: "Kok Seng and Sunset" },
               className: "col-span-6 row-span-1",
             },
             {
-              data: { src: SunsetAiKee, alt: "Ai Kee and Sunset" },
+              data: { src: SunsetAiKeePhoto, alt: "Ai Kee and Sunset" },
               className: "col-span-6 row-span-1",
             },
             {
-              data: { src: SunsetAunt, alt: "Aunt and Sunset" },
+              data: { src: SunsetAuntPhoto, alt: "Aunt and Sunset" },
               className: "col-span-6 row-span-1",
             },
             {
-              data: { src: SunsetFiona, alt: "Fiona and Sunset" },
+              data: { src: SunsetFionaPhoto, alt: "Fiona and Sunset" },
               className: "col-span-12 md:col-span-4 row-span-1",
             },
             {
-              data: { src: SunsetMindy, alt: "Mindy and Sunset" },
+              data: { src: SunsetMindyPhoto, alt: "Mindy and Sunset" },
               className: "col-span-6 md:col-span-4 row-span-1",
             },
             {
-              data: { src: SunsetMarcus, alt: "Marcus and Sunset" },
+              data: { src: SunsetMarcusPhoto, alt: "Marcus and Sunset" },
               className: "col-span-6 md:col-span-4 row-span-1",
             },
           ]}
@@ -444,11 +444,11 @@ export const Day2Page = () => {
           variant={mediaContainerVariant.Quilt}
           data={[
             {
-              data: { src: DinnerHotpot, alt: "Steamboat Dinner" },
+              data: { src: DinnerHotpotPhoto, alt: "Steamboat Dinner" },
               className: "col-span-6 row-span-1",
             },
             {
-              data: { src: DinnerFriedFood, alt: "Fried Food" },
+              data: { src: DinnerFriedFoodPhoto, alt: "Fried Food" },
               className: "col-span-6 row-span-1",
             },
           ]}
