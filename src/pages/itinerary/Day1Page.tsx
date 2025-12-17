@@ -1,9 +1,9 @@
 import { Page } from "@/components/page/Page";
 import { PageContainer } from "@/components/page/PageContainer";
 import { PageContainerItem } from "@/components/page/PageContainerItem";
-import { PageContainerItemImage } from "@/components/page/PageContainerItemImage";
+import { PageContainerItemMedia } from "@/components/page/PageContainerItemMedia";
 import { PageHeadline } from "@/components/page/PageHeadline";
-import { mediaContainerVariant } from "@/components/page/constants";
+import { MediaType } from "@/components/page/constants";
 import TemplePhoto from "@/assets/photos/Day1_Temple.jpg";
 import TempleWefiePhoto from "@/assets/photos/Day1_Temple_Wefie.jpg";
 import TempleBridgePhoto from "@/assets/photos/Day1_Temple_Bridge.jpg";
@@ -51,6 +51,7 @@ import SunriseFarmYellowFruitPhoto from "@/assets/photos/Day1_SunriseFarm_Fruit_
 import SunriseFarmRedFruitPhoto from "@/assets/photos/Day1_SunriseFarm_Fruit_Red.jpg";
 import SunriseFarmHoneyPhoto from "@/assets/photos/Day1_SunriseFarm_Honey.jpg";
 import SunriseFarmPuppyPhoto from "@/assets/photos/Day1_SunriseFarm_Puppy.jpg";
+import SunriseFarmPuppyVideo from "@/assets/videos/Day1_SunriseFarm_Puppy.mp4";
 import SunriseFarmStallPhoto from "@/assets/photos/Day1_SunriseFarm_Stall.jpg";
 import SunriseFarmChickenPhoto from "@/assets/photos/Day1_SunriseFarm_Chicken.jpg";
 import SunriseFarmPorcupinePhoto from "@/assets/photos/Day1_SunriseFarm_Porcupine.jpg";
@@ -80,50 +81,12 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: TemplePhoto, alt: "Temple" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: TempleWefiePhoto, alt: "Temple Wefie" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: TempleBridgePhoto, alt: "Bridge" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: TempleColorsPhoto, alt: "Colors" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: TempleWishingTreePhoto, alt: "Wishing Tree" },
-              className: "col-span-12 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: TemplePhoto, alt: "Temple" },
+              className: "col-span-full",
             },
           ]}
         />
@@ -138,24 +101,12 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: TempleWheelPhoto, alt: "Temple Wheel" },
-              className: "col-span-8 md:col-span-12 row-span-1",
-            },
-            {
-              data: { src: TempleWheelInstructionsPhoto, alt: "Temple Wheel Instructions" },
-              className: "col-span-4 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: TempleWheelAiChooPhoto, alt: "Ai Choo with Temple Wheel" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: TempleWheelAiKeePhoto, alt: "Ai Kee with Temple Wheel" },
-              className: "col-span-6 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: TempleWefiePhoto, alt: "Temple Wefie" },
+              className: "col-span-full",
             },
           ]}
         />
@@ -170,24 +121,22 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: GardenEntrancePhoto, alt: "Garden Entrance" },
-              className: "col-span-4 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: TempleBridgePhoto, alt: "Bridge" },
+              className: "col-span-6 md:col-span-4",
             },
             {
-              data: { src: GardenColorsPhoto, alt: "Colors in the Garden" },
-              className: "col-span-8 md:col-span-12 row-span-1",
+              type: MediaType.Image,
+              media: { src: TempleColorsPhoto, alt: "Colors" },
+              className: "col-span-6 md:col-span-4",
             },
             {
-              data: { src: GardenFlowerKokSengPhoto, alt: "Kok Seng with Garden Flower Statue" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: GardenFlowerSistersPhoto, alt: "Sisters with Garden Flower Statue" },
-              className: "col-span-6 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: TempleWishingTreePhoto, alt: "Wishing Tree" },
+              className: "col-span-full md:col-span-4",
             },
           ]}
         />
@@ -202,31 +151,36 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: GardenIceCreamPhoto, alt: "Ice Cream" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: YongJuanHinMenu1Photo, alt: "Yong Juan Hin Menu 1" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: TempleWheelPhoto, alt: "Temple Wheel" },
+              className: "col-span-8 md:col-span-full",
             },
             {
-              data: { src: YongJuanHinMenu2Photo, alt: "Yong Juan Hin Menu 2" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: TempleWheelInstructionsPhoto,
+                alt: "Temple Wheel Instructions",
+              },
+              className: "col-span-4 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: TempleWheelAiChooPhoto,
+                alt: "Ai Choo with Temple Wheel",
+              },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: TempleWheelAiKeePhoto,
+                alt: "Ai Kee with Temple Wheel",
+              },
+              className: "col-span-6 md:col-span-4",
             },
           ]}
         />
@@ -241,16 +195,33 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: YongJuanHinDrinksPhoto, alt: "Yong Juan Hin Drinks" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: GardenEntrancePhoto, alt: "Garden Entrance" },
+              className: "col-span-4 md:col-span-4",
             },
             {
-              data: { src: YongJuanHinFoodPhoto, alt: "Yong Juan Hin Food" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: GardenColorsPhoto, alt: "Colors in the Garden" },
+              className: "col-span-8 md:col-span-full",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: GardenFlowerKokSengPhoto,
+                alt: "Kok Seng with Garden Flower Statue",
+              },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: GardenFlowerSistersPhoto,
+                alt: "Sisters with Garden Flower Statue",
+              },
+              className: "col-span-6 md:col-span-4",
             },
           ]}
         />
@@ -265,16 +236,12 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: YiPinShaoPhoto, alt: "Yi Pin Shao" },
-              className: "col-span-6 row-span-1",
-            },
-            {
-              data: { src: YiPinShaoInteriorPhoto, alt: "Yi Pin Shao Interior" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: GardenIceCreamPhoto, alt: "Ice Cream" },
+              className: "col-span-full",
             },
           ]}
         />
@@ -289,16 +256,23 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: YiPinShaoSoupPhoto, alt: "Yi Pin Shao Soup" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: YongJuanHinMenu1Photo,
+                alt: "Yong Juan Hin Menu 1",
+              },
+              className: "col-span-6",
             },
             {
-              data: { src: YiPinShaoFoodPhoto, alt: "Yi Pin Shao Food" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: YongJuanHinMenu2Photo,
+                alt: "Yong Juan Hin Menu 2",
+              },
+              className: "col-span-6",
             },
           ]}
         />
@@ -313,16 +287,20 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmNamePhoto, alt: "Sunrise Farm Name" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: YongJuanHinDrinksPhoto,
+                alt: "Yong Juan Hin Drinks",
+              },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmEntrancePhoto, alt: "Sunrise Farm Entrance" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: YongJuanHinFoodPhoto, alt: "Yong Juan Hin Food" },
+              className: "col-span-6",
             },
           ]}
         />
@@ -337,16 +315,20 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmReceptionPhoto, alt: "Sunrise Farm Reception" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: YiPinShaoPhoto, alt: "Yi Pin Shao" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmStagePhoto, alt: "Sunrise Farm Stage" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: YiPinShaoInteriorPhoto,
+                alt: "Yi Pin Shao Interior",
+              },
+              className: "col-span-6",
             },
           ]}
         />
@@ -361,16 +343,17 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmSantaPhoto, alt: "Sunrise Farm Santa" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: YiPinShaoSoupPhoto, alt: "Yi Pin Shao Soup" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmCarPhoto, alt: "Sunrise Farm Car" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: YiPinShaoFoodPhoto, alt: "Yi Pin Shao Food" },
+              className: "col-span-6",
             },
           ]}
         />
@@ -385,31 +368,20 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: SunriseFarmUmbrellaPhoto, alt: "Sunrise Farm Umbrella" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmWatermelonPhoto, alt: "Sunrise Farm Watermelon" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseFarmNamePhoto, alt: "Sunrise Farm Name" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmRabbitPhoto, alt: "Sunrise Farm Rabbit" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmEntrancePhoto,
+                alt: "Sunrise Farm Entrance",
+              },
+              className: "col-span-6",
             },
           ]}
         />
@@ -424,20 +396,20 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmBackyardPhoto, alt: "Sunrise Farm Backyard" },
-              className: "col-span-12 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmReceptionPhoto,
+                alt: "Sunrise Farm Reception",
+              },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmBackyardScenery1Photo, alt: "Sunrise Farm Backyard Scenery 1" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmBackyardScenery2Photo, alt: "Sunrise Farm Backyard Scenery 2" },
-              className: "col-span-6 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseFarmStagePhoto, alt: "Sunrise Farm Stage" },
+              className: "col-span-6",
             },
           ]}
         />
@@ -452,16 +424,17 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmBackyardBilliardPhoto, alt: "Sunrise Farm Billiard" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseFarmSantaPhoto, alt: "Sunrise Farm Santa" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmBackyardKaraokePhoto, alt: "Sunrise Farm Karaoke" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseFarmCarPhoto, alt: "Sunrise Farm Car" },
+              className: "col-span-6",
             },
           ]}
         />
@@ -476,28 +449,15 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmMainRoomPhoto, alt: "Living Room" },
-              className: "col-span-12 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmBedroom1Photo, alt: "Bedroom 1" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmBedroom2Photo, alt: "Bedroom 2" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmToiletPhoto, alt: "Toilet" },
-              className: "col-span-6 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmLaundryPhoto, alt: "Laundry Room" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmUmbrellaPhoto,
+                alt: "Sunrise Farm Umbrella",
+              },
+              className: "col-span-full",
             },
           ]}
         />
@@ -512,16 +472,23 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmBusAiChooPhoto, alt: "Ai Choo with Sunrise Farm Bus" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmWatermelonPhoto,
+                alt: "Sunrise Farm Watermelon",
+              },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmBusKokSengPhoto, alt: "Kok Seng with Sunrise Farm Bus" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmRabbitPhoto,
+                alt: "Sunrise Farm Rabbit",
+              },
+              className: "col-span-6",
             },
           ]}
         />
@@ -536,16 +503,31 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmYellowFruitPhoto, alt: "Yellow Fruit" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBackyardPhoto,
+                alt: "Sunrise Farm Backyard",
+              },
+              className: "col-span-full md:col-span-4",
             },
             {
-              data: { src: SunriseFarmRedFruitPhoto, alt: "Red Fruit" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBackyardScenery1Photo,
+                alt: "Sunrise Farm Backyard Scenery 1",
+              },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBackyardScenery2Photo,
+                alt: "Sunrise Farm Backyard Scenery 2",
+              },
+              className: "col-span-6 md:col-span-4",
             },
           ]}
         />
@@ -560,70 +542,23 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: SunriseFarmHoneyPhoto, alt: "Sunrise Farm Honey" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: SunriseFarmPuppyPhoto, alt: "Sunrise Farm Puppy" }}
-        />
-        <PageContainerItem>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: SunriseFarmStallPhoto, alt: "Animal Farm Stall" },
-              className: "col-span-12 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBackyardBilliardPhoto,
+                alt: "Sunrise Farm Billiard",
+              },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFarmChickenPhoto, alt: "Animal Farm Chicken" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmGuineafowlPhoto, alt: "Animal Farm Guineafowl" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmTurkeyPhoto, alt: "Animal Farm Turkey" },
-              className: "col-span-6 md:col-span-4 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmMonkeyPhoto, alt: "Animal Farm Monkey" },
-              className: "col-span-6 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmPorcupinePhoto, alt: "Animal Farm Porcupine" },
-              className: "col-span-12 md:col-span-6 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmGoosePhoto, alt: "Animal Farm Geese" },
-              className: "col-span-6 row-span-1",
-            },
-            {
-              data: { src: SunriseFarmGoslingPhoto, alt: "Animal Farm Gosling" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBackyardKaraokePhoto,
+                alt: "Sunrise Farm Karaoke",
+              },
+              className: "col-span-6",
             },
           ]}
         />
@@ -638,9 +573,231 @@ export const Day1Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Image}
-          data={{ src: DinnerPhoto, alt: "Dinner" }}
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmMainRoomPhoto, alt: "Living Room" },
+              className: "col-span-full md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmBedroom1Photo, alt: "Bedroom 1" },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmBedroom2Photo, alt: "Bedroom 2" },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmToiletPhoto, alt: "Toilet" },
+              className: "col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmLaundryPhoto, alt: "Laundry Room" },
+              className: "col-span-6",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBusAiChooPhoto,
+                alt: "Ai Choo with Sunrise Farm Bus",
+              },
+              className: "col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmBusKokSengPhoto,
+                alt: "Kok Seng with Sunrise Farm Bus",
+              },
+              className: "col-span-6",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmYellowFruitPhoto, alt: "Yellow Fruit" },
+              className: "col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmRedFruitPhoto, alt: "Red Fruit" },
+              className: "col-span-6",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmHoneyPhoto,
+                alt: "Sunrise Farm Honey",
+              },
+              className: "col-span-full max-w-md mx-auto",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmPuppyPhoto,
+                alt: "Sunrise Farm Puppy",
+              },
+              className: "col-span-6 max-w-md mx-auto",
+            },
+            {
+              type: MediaType.Video,
+              media: { src: SunriseFarmPuppyVideo },
+              className: "col-span-6 max-w-md mx-auto",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmStallPhoto, alt: "Animal Farm Stall" },
+              className: "col-span-full",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmChickenPhoto,
+                alt: "Animal Farm Chicken",
+              },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmGuineafowlPhoto,
+                alt: "Animal Farm Guineafowl",
+              },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmTurkeyPhoto, alt: "Animal Farm Turkey" },
+              className: "col-span-6 md:col-span-4",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmMonkeyPhoto, alt: "Animal Farm Monkey" },
+              className: "col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmPorcupinePhoto,
+                alt: "Animal Farm Porcupine",
+              },
+              className: "col-span-full md:col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: SunriseFarmGoosePhoto, alt: "Animal Farm Geese" },
+              className: "col-span-6",
+            },
+            {
+              type: MediaType.Image,
+              media: {
+                src: SunriseFarmGoslingPhoto,
+                alt: "Animal Farm Gosling",
+              },
+              className: "col-span-6",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Image,
+              media: {
+                src: DinnerPhoto,
+                alt: "Dinner",
+              },
+              className: "col-span-full",
+            },
+          ]}
         />
         <PageContainerItem>
           Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -17,15 +17,20 @@ declare global {
    * The custom DeepReadonly<TravelTrip[]> type explicitly tells TypeScript that every single property of every object in the array is also read-only.
    */
   type DeepReadonly<T> = T extends (infer R)[]
-  ? readonly DeepReadonly<R>[]
-  : T extends object
-  ? {
-      readonly [P in keyof T]: DeepReadonly<T[P]>;
-    }
-  : T;
+    ? readonly DeepReadonly<R>[]
+    : T extends object
+    ? {
+        readonly [P in keyof T]: DeepReadonly<T[P]>;
+      }
+    : T;
 
   interface Image {
-    src: string,
-    alt: string
+    src: string;
+    alt: string;
+  }
+
+  interface Video {
+    src: string;
+    type?: string;
   }
 }

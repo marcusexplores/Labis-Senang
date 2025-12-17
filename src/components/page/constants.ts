@@ -3,3 +3,5 @@ export const mediaContainerVariant = {
   Video: "Video",
   Quilt: "Quilt",
 } as const;
+
+export { MediaType } from "@/components/quilt/constants";

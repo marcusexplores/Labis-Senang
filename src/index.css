@@ -2,9 +2,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@source inline("col-span-{{1..12}}");
-@source inline("row-span-{{1..12}}");
-
 :root {
   --background: oklch(0.9303 0.0498 93.3970);
   --foreground: oklch(0.3211 0.0503 268.0042);

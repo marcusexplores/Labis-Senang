@@ -1,4 +1,5 @@
 export interface QuiltTile {
-  data: Image;
+  type: string;
+  media: Image | Video;
   className: string;
 }

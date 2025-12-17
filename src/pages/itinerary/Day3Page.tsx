@@ -1,9 +1,9 @@
 import { Page } from "@/components/page/Page";
 import { PageContainer } from "@/components/page/PageContainer";
 import { PageContainerItem } from "@/components/page/PageContainerItem";
-import { PageContainerItemImage } from "@/components/page/PageContainerItemImage";
+import { PageContainerItemMedia } from "@/components/page/PageContainerItemMedia";
 import { PageHeadline } from "@/components/page/PageHeadline";
-import { mediaContainerVariant } from "@/components/page/constants";
+import { MediaType } from "@/components/page/constants";
 import Sunrise from "@/assets/photos/Day3_Sunrise.jpg";
 import SunriseFamily from "@/assets/photos/Day3_Sunrise_Family.jpg";
 import SunriseAiChoo from "@/assets/photos/Day3_Sunrise_AiChoo.jpg";
@@ -29,32 +29,36 @@ export const Day3Page = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </PageContainerItem>
-        <PageContainerItemImage
-          variant={mediaContainerVariant.Quilt}
+        <PageContainerItemMedia
           data={[
             {
-              data: { src: Sunrise, alt: "Sunrise" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: Sunrise, alt: "Sunrise" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseFamily, alt: "Sunrise with Family" },
-              className: "col-span-6 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseFamily, alt: "Sunrise with Family" },
+              className: "col-span-6",
             },
             {
-              data: { src: SunriseAiChoo, alt: "Ai Choo and Sunrise" },
-              className: "col-span-6 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseAiChoo, alt: "Ai Choo and Sunrise" },
+              className: "col-span-6 md:col-span-4",
             },
             {
-              data: { src: SunriseAiKee, alt: "Ai Kee and Sunrise" },
-              className: "col-span-6 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseAiKee, alt: "Ai Kee and Sunrise" },
+              className: "col-span-6 md:col-span-4",
             },
             {
-              data: { src: SunriseMindy, alt: "Mindy and Sunrise" },
-              className: "col-span-12 md:col-span-4 row-span-1",
+              type: MediaType.Image,
+              media: { src: SunriseMindy, alt: "Mindy and Sunrise" },
+              className: "col-span-12 md:col-span-4",
             },
           ]}
         />
       </PageContainer>
     </Page>
   );
-}
+};
