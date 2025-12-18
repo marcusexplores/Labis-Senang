@@ -1,5 +1,5 @@
 import { Quilt } from "@/components/quilt/Quilt";
-import type { QuiltTile } from "@/components//quilt/types";
+import type { QuiltTile } from "@/components/quilt/types";
 import { PageContainerItem } from "./PageContainerItem";
 
 interface PageContainerItemMediaProps {
