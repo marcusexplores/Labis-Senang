@@ -9,7 +9,7 @@ import HeroBanner from "@/assets/photos/Home_Banner.jpg";
 export const HomePage = () => {
   return (
     <Page hideTopPadding>
-      <section className="relative w-full overflow-hidden min-h-screen flex justify-center">
+      <section className="relative w-full overflow-hidden h-auto min-h-[400px] md:h-screen flex justify-center">
         <div
           className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${HeroBanner})` }}

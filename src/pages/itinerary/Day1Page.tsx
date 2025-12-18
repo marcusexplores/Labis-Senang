@@ -18,6 +18,7 @@ import GardenColorsPhoto from "@/assets/photos/Day1_Garden_Colors.jpg";
 import GardenFlowerKokSengPhoto from "@/assets/photos/Day1_Garden_Flower_KokSeng.jpg";
 import GardenFlowerSistersPhoto from "@/assets/photos/Day1_Garden_Flower_Sisters.jpg";
 import GardenIceCreamPhoto from "@/assets/photos/Day1_Garden_IceCream.jpg";
+import GardenAiKeePhoto from "@/assets/photos/Day1_Garden_AiKee.jpeg";
 import YongJuanHinMenu1Photo from "@/assets/photos/Day1_YongJuanHin_Menu1.jpg";
 import YongJuanHinMenu2Photo from "@/assets/photos/Day1_YongJuanHin_Menu2.jpg";
 import YongJuanHinDrinksPhoto from "@/assets/photos/Day1_YongJuanHin_Drinks.jpg";
@@ -241,7 +242,12 @@ export const Day1Page = () => {
             {
               type: MediaType.Image,
               media: { src: GardenIceCreamPhoto, alt: "Ice Cream" },
-              className: "col-span-full",
+              className: "col-span-8",
+            },
+            {
+              type: MediaType.Image,
+              media: { src: GardenAiKeePhoto, alt: "Ai Kee with Ice Cream" },
+              className: "col-span-4",
             },
           ]}
         />
