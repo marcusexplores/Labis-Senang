@@ -11,7 +11,8 @@ import HingKheePhoto from "@/assets/photos/Day2_HingKhee.jpg";
 import HingKheePreparationPhoto from "@/assets/photos/Day2_HingKhee_Preparation.jpg";
 import HingKheeReadyPhoto from "@/assets/photos/Day2_HingKhee_Ready.jpg";
 import HingKheeAiChooPhoto from "@/assets/photos/Day2_HingKhee_Ready_Aichoo.jpg";
-import HingKheeServedPhoto from "@/assets/photos/Day2_HingKheeServed.jpg";
+import HingKheeServedPhoto from "@/assets/photos/Day2_HingKhee_Served.jpg";
+import HingKheeBaoMakingVideo from "@/assets/videos/Day2_HingKhee_BaoMakingProcess.mp4";
 import HockHoeSengPhoto from "@/assets/photos/Day2_HockHoeSeng.jpg";
 import TempleOverviewPhoto from "@/assets/photos/Day2_Temple_Overview.jpg";
 import TempleFionaMindyPhoto from "@/assets/photos/Day2_Temple_FionaMindy.jpg";
@@ -144,6 +145,26 @@ export const Day2Page = () => {
               type: MediaType.Image,
               media: { src: HingKheeAiChooPhoto, alt: "Ai Choo with Baos" },
               className: "col-span-4",
+            },
+          ]}
+        />
+        <PageContainerItem>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </PageContainerItem>
+        <PageContainerItemMedia
+          data={[
+            {
+              type: MediaType.Video,
+              media: { src: HingKheeBaoMakingVideo },
+              className: "col-span-full",
             },
           ]}
         />
